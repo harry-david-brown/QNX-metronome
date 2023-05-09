@@ -2,7 +2,7 @@
 C program that works like a metronome, printing a time-signature beat to the correct timing in real-time. Uses timers, message passing, and a resource manager
 
 ### Output ###
-Usage: ./metronome <beats-per-minute> <time-signature-top> <time-signature-bottom>
+Usage: ./metronome beats-per-minute time-signature-top time-signature-bottom
 $./metronome 100 2 4  
 :1&2&  
 :1&2&  
