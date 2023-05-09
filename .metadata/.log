@@ -1,0 +1,811 @@
+!SESSION 2023-04-05 12:37:02.102 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-05 12:37:22.204
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-05 12:37:22.206
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-05 12:37:22.207
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-05 12:37:22.208
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-05 12:37:22.212
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-05 12:37:22.212
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-05 12:37:22.313
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-05 12:37:22.496
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-05 12:37:22.507
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-04-09T09:18:39Z)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-04-05 12:37:22.572
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-05 12:39:22.616
+!MESSAGE Heartbeat request not sent. Time is not right.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-05 12:39:22.617
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-05 12:39:22.618
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-04-09T09:18:39Z)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-04-05 14:31:06.997
+!MESSAGE Indexed 'metronome' (1 sources, 17 headers) in 0.249 sec: 1,208 declarations; 1,107 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2023-04-09 17:24:05.194 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-09 19:49:19.141
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-04-09 19:49:28.061
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-09 19:49:29.621
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-09 19:49:29.622
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-09 19:49:29.623
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-09 19:49:29.623
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-09 19:49:29.625
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-09 19:49:29.625
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-09 19:49:29.762
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-09 19:49:30.080
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-09 19:49:30.102
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-04-09T09:18:39Z)
+
+!ENTRY com.qnx.swupdate.common.license.HeartbeatManager 1 0 2023-04-09 19:51:30.678
+!MESSAGE Sending heartbeat request to https://www.qnx.com/api/1/heartbeat/poller.php
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-09 19:51:31.418
+!MESSAGE Successful response: {"transaction":"7UE8m-lfWMS-dJqMx-tvIow-bvmkp-xl0hq","next_send":"2023-05-09T19:51:57Z","licenses":{"8886031":{"activation_status":"not_activated","status_code":5,"status_message":"Invalid Serial Number","license_key":"UDLT-W6E1-0U0K-XNCM-968E"}},"uid_a":"2okHwH2MEOERx5E5y9OW","uid_b":"RkaNBc6M1ETmJsjKkP6T","uid_c":"BXjqqk7rFWRdwCNlfyhZ"}
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 4 0 2023-04-09 19:51:31.479
+!MESSAGE FAILED LICENSES: {com.qnx.swupdate.common.license.HeartbeatResponse$ServerLicenseState(serialNumber=8886031, key=UDLT-W6E1-0U0K-XNCM-968E, activationState=NOT_ACTIVATED, statusCode=INVALID_SERIAL_NUMBER, statusMessage="Invalid Serial Number")=Optional[Status OK: com.qnx.tools.license code=0 License OK]}
+
+!ENTRY com.qnx.tools.ide.heartbeat.licenseHandler.LicenseHandler 1 0 2023-04-09 19:51:31.480
+!MESSAGE Handling failed heartbeat licenses: {com.qnx.swupdate.common.license.HeartbeatResponse$ServerLicenseState(serialNumber=8886031, key=UDLT-W6E1-0U0K-XNCM-968E, activationState=NOT_ACTIVATED, statusCode=INVALID_SERIAL_NUMBER, statusMessage="Invalid Serial Number")=Optional[Status OK: com.qnx.tools.license code=0 License OK]}
+
+!ENTRY com.qnx.tools.ide.heartbeat.licenseHandler.LicenseHandler 1 0 2023-04-09 19:51:31.481
+!MESSAGE LC5: License Compliance Issue (license key UDLT-W6E1-0U0K-XNCM-968E): Invalid Serial Number
+Please visit https://www.myqnx.com for more info.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-09 19:51:31.482
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-09 19:51:31.483
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-04-10 18:53:03.082
+!MESSAGE Indexed 'metronome-controller' (1 sources, 17 headers) in 0.073 sec: 1,208 declarations; 1,107 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.qnx.tools.ide.fsys 4 4 2023-04-11 05:46:03.901
+!MESSAGE Error
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.base/java.net.SocketInputStream.read(Unknown Source)
+	at java.base/java.net.SocketInputStream.read(Unknown Source)
+	at java.base/java.net.SocketInputStream.read(Unknown Source)
+	at java.base/java.io.FilterInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetBinary.receiveResponse(TargetBinary.java:105)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.command(TargetServiceFile.java:225)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.read(TargetServiceFile.java:570)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.read(TargetServiceFile.java:537)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.read(TargetServiceFile.java:533)
+	at com.qnx.tools.ide.fsys.core.FsysFolderResource.refresh(FsysFolderResource.java:91)
+	at com.qnx.tools.ide.fsys.ui.FsysWFolderResource$1$1.run(FsysWFolderResource.java:39)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at com.qnx.tools.ide.fsys.ui.FsysWFolderResource$1.getChildren(FsysWFolderResource.java:36)
+	at com.qnx.tools.ide.fsys.ui.FsysTreeContentProvider.getChildren(FsysTreeContentProvider.java:77)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1432)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:350)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:850)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:624)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:826)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpandToLevel(AbstractTreeViewer.java:1808)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.expandToLevel(AbstractTreeViewer.java:1131)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.expandToLevel(AbstractTreeViewer.java:1103)
+	at com.qnx.tools.ide.fsys.ui.FileSystemView$13.run(FileSystemView.java:1404)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at com.qnx.tools.ide.fsys.ui.FileSystemView.doubleClick(FileSystemView.java:1364)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:780)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:777)
+	at org.eclipse.jface.viewers.StructuredViewer.handleDoubleSelect(StructuredViewer.java:1098)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1211)
+	at org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:272)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:329)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.jface 2 0 2023-04-11 05:46:04.015
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:519)
+	at com.qnx.tools.ide.fsys.ui.FileSystemView$11.run(FileSystemView.java:1231)
+	at com.qnx.tools.ide.fsys.ui.FileSystemView$12.run(FileSystemView.java:1347)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:394)
+	at org.eclipse.jface.dialogs.MessageDialog.openError(MessageDialog.java:480)
+	at com.qnx.tools.ide.fsys.ui.FsysWFolderResource$1.getChildren(FsysWFolderResource.java:50)
+	at com.qnx.tools.ide.fsys.ui.FsysTreeContentProvider.getChildren(FsysTreeContentProvider.java:77)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1432)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:350)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:850)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:624)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:826)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalExpandToLevel(AbstractTreeViewer.java:1808)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.expandToLevel(AbstractTreeViewer.java:1131)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.expandToLevel(AbstractTreeViewer.java:1103)
+	at com.qnx.tools.ide.fsys.ui.FileSystemView$13.run(FileSystemView.java:1404)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at com.qnx.tools.ide.fsys.ui.FileSystemView.doubleClick(FileSystemView.java:1364)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:780)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:777)
+	at org.eclipse.jface.viewers.StructuredViewer.handleDoubleSelect(StructuredViewer.java:1098)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1211)
+	at org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:272)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:329)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.equinox.security 1 0 2023-04-12 14:23:35.899
+!MESSAGE New keyring password generated. 
+
+!ENTRY org.eclipse.remote.core 4 0 2023-04-12 14:24:36.279
+!MESSAGE Connection canceled by user
+
+!ENTRY org.eclipse.remote.core 4 0 2023-04-12 14:24:58.101
+!MESSAGE Connection canceled by user
+
+!ENTRY org.eclipse.remote.core 4 0 2023-04-12 14:26:17.858
+!MESSAGE Connection canceled by user
+
+!ENTRY org.eclipse.remote.core 4 0 2023-04-12 14:26:55.493
+!MESSAGE SSH_MSG_DISCONNECT: 2 Too many authentication failures 
+
+!ENTRY org.eclipse.remote.core 4 0 2023-04-12 14:27:05.274
+!MESSAGE SSH_MSG_DISCONNECT: 2 Too many authentication failures 
+
+!ENTRY org.eclipse.remote.core 4 0 2023-04-12 14:31:28.813
+!MESSAGE Connection canceled by user
+
+!ENTRY com.qnx.tools.ide.target.core 4 2 2023-04-12 14:31:57.327
+!MESSAGE Problems occurred when invoking code from plug-in: "com.qnx.tools.ide.target.core".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY com.qnx.tools.ide.target.core 4 -1 2023-04-12 14:31:57.329
+!MESSAGE An exception occurred during target change notification
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:31:57.426
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2023-04-12 14:32:03.705 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:32:14.884
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-04-12 14:32:22.847
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:32:24.550
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:32:24.551
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:32:24.551
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:32:24.552
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:32:24.556
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:32:24.557
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:32:24.688
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:32:24.997
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:32:25.021
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:34:25.086
+!MESSAGE Heartbeat request not sent. Time is not right.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:34:25.088
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:34:25.088
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.target.core 4 2 2023-04-12 14:39:31.319
+!MESSAGE Problems occurred when invoking code from plug-in: "com.qnx.tools.ide.target.core".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY com.qnx.tools.ide.target.core 4 -1 2023-04-12 14:39:31.320
+!MESSAGE An exception occurred during target change notification
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:39:31.376
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-12 14:39:31.689
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.remote.internal.console.TerminalConsoleFactory$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-12 14:39:31.690
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.remote.internal.console.TerminalConsoleFactory$1
+!SESSION 2023-04-12 14:39:33.851 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:39:37.074
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-04-12 14:39:39.673
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:39:40.908
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:39:40.911
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:39:40.912
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:39:40.915
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:39:40.917
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:39:40.918
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:39:41.035
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:39:41.279
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:39:41.297
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:41:41.407
+!MESSAGE Heartbeat request not sent. Time is not right.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:41:41.408
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:41:41.409
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.target.core 4 2 2023-04-12 14:42:31.747
+!MESSAGE Problems occurred when invoking code from plug-in: "com.qnx.tools.ide.target.core".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY com.qnx.tools.ide.target.core 4 -1 2023-04-12 14:42:31.748
+!MESSAGE An exception occurred during target change notification
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:42:31.797
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-12 14:42:32.110
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.remote.internal.console.TerminalConsoleFactory$1
+!SESSION 2023-04-12 14:42:37.997 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:42:40.890
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-04-12 14:42:43.417
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:42:44.567
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:42:44.568
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:42:44.569
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:42:44.569
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:42:44.573
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:42:44.576
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:42:44.668
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:42:44.929
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:42:44.947
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:44:45.059
+!MESSAGE Heartbeat request not sent. Time is not right.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:44:45.060
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:44:45.061
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY org.eclipse.remote.core 4 0 2023-04-12 14:44:54.497
+!MESSAGE Connection canceled by user
+
+!ENTRY com.qnx.tools.ide.target.core 4 2 2023-04-12 14:50:05.680
+!MESSAGE Problems occurred when invoking code from plug-in: "com.qnx.tools.ide.target.core".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY com.qnx.tools.ide.target.core 4 -1 2023-04-12 14:50:05.681
+!MESSAGE An exception occurred during target change notification
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:50:05.736
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-12 14:50:06.078
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.remote.internal.console.TerminalConsoleFactory$1
+!SESSION 2023-04-12 14:50:07.801 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-12 14:50:11.085
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-04-12 14:50:13.504
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:50:14.737
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:50:14.738
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:50:14.739
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-12 14:50:14.741
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:50:14.743
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-12 14:50:14.744
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:50:14.859
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:50:15.091
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:50:15.108
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:52:15.175
+!MESSAGE Heartbeat request not sent. Time is not right.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-12 14:52:15.177
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-12 14:52:15.177
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-04-13 14:18:22.312
+!MESSAGE Indexed 'test_metronome' (1 sources, 17 headers) in 0.171 sec: 1,208 declarations; 1,107 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.qnx.tools.ide.target.core 4 2 2023-04-13 14:39:40.788
+!MESSAGE Problems occurred when invoking code from plug-in: "com.qnx.tools.ide.target.core".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY com.qnx.tools.ide.target.core 4 -1 2023-04-13 14:39:40.789
+!MESSAGE An exception occurred during target change notification
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4907)
+	at org.eclipse.swt.SWT.error(SWT.java:4822)
+	at org.eclipse.swt.SWT.error(SWT.java:4793)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1272)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:789)
+	at org.eclipse.launchbar.ui.controls.internal.CSelector.refresh(CSelector.java:464)
+	at org.eclipse.launchbar.ui.controls.internal.TargetSelector.launchTargetStatusChanged(TargetSelector.java:258)
+	at org.eclipse.launchbar.core.internal.target.LaunchTargetManager.targetStatusChanged(LaunchTargetManager.java:271)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnLaunchTargetProvider.targetChanged(QconnLaunchTargetProvider.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.run(TargetRegistry.java:169)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry$TargetNotifier.notify(TargetRegistry.java:194)
+	at com.qnx.tools.ide.target.internal.core.TargetRegistry.fireUpdate(TargetRegistry.java:129)
+	at com.qnx.tools.ide.target.core.TargetConnection.notifyTargetChange(TargetConnection.java:87)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.setConnectionState(QconnConnectionThread.java:208)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnConnectionThread.run(QconnConnectionThread.java:112)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-13 14:39:40.868
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-13 14:39:41.218
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.remote.internal.console.TerminalConsoleFactory$1
+!SESSION 2023-04-13 14:39:43.109 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-13 14:39:51.269
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-04-13 14:39:58.998
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-13 14:40:00.580
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-13 14:40:00.582
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-13 14:40:00.584
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-04-13 14:40:00.584
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-13 14:40:00.587
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-04-13 14:40:00.588
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-13 14:40:00.733
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-13 14:40:01.032
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-13 14:40:01.048
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-13 14:42:01.161
+!MESSAGE Heartbeat request not sent. Time is not right.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-04-13 14:42:01.163
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-04-13 14:42:01.163
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+!SESSION 2023-05-08 22:30:42.369 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-05-08 22:30:50.402
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.core 2 0 2023-05-08 22:30:59.995
+!MESSAGE Using previous doc directory C:\Users\harry\qnx710\target\qnx7\usr\help
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-05-08 22:31:01.846
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-05-08 22:31:01.848
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-05-08 22:31:01.848
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-05-08 22:31:01.849
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-05-08 22:31:01.850
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2023-05-08 22:31:01.851
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-05-08 22:31:02.024
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-05-08 22:31:02.379
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-05-08 22:31:02.399
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY com.qnx.tools.ide.target.qconn.core 4 0 2023-05-08 22:31:22.055
+!MESSAGE Command C:\Users\harry\qnx710\host\win64\x86_64\usr\bin\bash C:/Users/harry/qnx710/host/common/bin/mkqnximage --noprompt --help=brief failed with code 1:
+ 
+
+Builtin options:
+
+
+
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-05-08 22:33:02.483
+!MESSAGE Heartbeat request not sent. Time is not right.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2023-05-08 22:33:02.484
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2023-05-08 22:33:02.485
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-05-09T19:51:57Z)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-05-08 22:34:29.409
+!MESSAGE The workspace will exit with unsaved changes in this session.

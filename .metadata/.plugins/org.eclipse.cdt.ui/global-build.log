@@ -1,0 +1,1725 @@
+14:31:05 **** Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+14:35:05 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_close':
+src/metronome.c:136:10: warning: implicit declaration of function 'iofunc_close_default'; did you mean 'iofunc_lock_default'? [-Wimplicit-function-declaration]
+  return (iofunc_close_default(ctp, reserved, handle, extra));
+          ^~~~~~~~~~~~~~~~~~~~
+          iofunc_lock_default
+src/metronome.c: In function 'metronome_read':
+src/metronome.c:154:15: error: 'struct _io_read' has no member named 'buff'
+  memcpy(msg->i.buff, buf, nbytes);
+               ^
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:166:20: error: 'struct _io_write' has no member named 'buff'
+  memcpy(buf, msg->i.buff, msg->i.nbytes);
+                    ^
+src/metronome.c:207:12: error: 'io_write_t' {aka 'union <anonymous>'} has no member named 'o'
+  memcpy(msg->o.buff, buf, nbytes);
+            ^~
+src/metronome.c:161:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  int status = 0;
+      ^~~~~~
+src/metronome.c: In function 'main':
+src/metronome.c:235:2: error: unknown type name 'iofunc_func_t'; did you mean 'iofunc_funcs_t'?
+  iofunc_func_t dispatchTable[] = { { _IOFUNC_NFUNCS_READ,
+  ^~~~~~~~~~~~~
+  iofunc_funcs_t
+src/metronome.c:235:2: warning: braces around scalar initializer
+src/metronome.c:235:2: note: (near initialization for 'dispatchTable[0]')
+src/metronome.c:235:38: error: '_IOFUNC_NFUNCS_READ' undeclared (first use in this function); did you mean 'IOFUNC_ABILITY_READ'?
+  iofunc_func_t dispatchTable[] = { { _IOFUNC_NFUNCS_READ,
+                                      ^~~~~~~~~~~~~~~~~~~
+                                      IOFUNC_ABILITY_READ
+src/metronome.c:235:38: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome.c:236:5: error: 'iofunc_func_t' undeclared (first use in this function); did you mean 'iofunc_funcs_t'?
+    (iofunc_func_t) metronome_read }, { _IOFUNC_NFUNCS_WRITE,
+     ^~~~~~~~~~~~~
+     iofunc_funcs_t
+src/metronome.c:236:4: warning: excess elements in scalar initializer
+    (iofunc_func_t) metronome_read }, { _IOFUNC_NFUNCS_WRITE,
+    ^
+src/metronome.c:236:4: note: (near initialization for 'dispatchTable[0]')
+src/metronome.c:236:20: error: expected '}' before 'metronome_read'
+    (iofunc_func_t) metronome_read }, { _IOFUNC_NFUNCS_WRITE,
+                    ^~~~~~~~~~~~~~
+src/metronome.c:235:36: note: to match this '{'
+  iofunc_func_t dispatchTable[] = { { _IOFUNC_NFUNCS_READ,
+                                    ^
+src/metronome.c:236:4: warning: braces around scalar initializer
+    (iofunc_func_t) metronome_read }, { _IOFUNC_NFUNCS_WRITE,
+    ^
+src/metronome.c:236:4: note: (near initialization for 'dispatchTable[1]')
+src/metronome.c:236:40: error: '_IOFUNC_NFUNCS_WRITE' undeclared (first use in this function); did you mean 'IOFUNC_MOUNT_32BIT'?
+    (iofunc_func_t) metronome_read }, { _IOFUNC_NFUNCS_WRITE,
+                                        ^~~~~~~~~~~~~~~~~~~~
+                                        IOFUNC_MOUNT_32BIT
+src/metronome.c:237:4: warning: excess elements in scalar initializer
+    (iofunc_func_t) metronome_write }, { _IOFUNC_NFUNCS_CLOSE,
+    ^
+src/metronome.c:237:4: note: (near initialization for 'dispatchTable[1]')
+src/metronome.c:237:20: error: expected '}' before 'metronome_write'
+    (iofunc_func_t) metronome_write }, { _IOFUNC_NFUNCS_CLOSE,
+                    ^~~~~~~~~~~~~~~
+src/metronome.c:236:38: note: to match this '{'
+    (iofunc_func_t) metronome_read }, { _IOFUNC_NFUNCS_WRITE,
+                                      ^
+src/metronome.c:237:4: warning: braces around scalar initializer
+    (iofunc_func_t) metronome_write }, { _IOFUNC_NFUNCS_CLOSE,
+    ^
+src/metronome.c:237:4: note: (near initialization for 'dispatchTable[2]')
+src/metronome.c:237:41: error: '_IOFUNC_NFUNCS_CLOSE' undeclared (first use in this function); did you mean 'IOFUNC_MOUNT_FLAGS'?
+    (iofunc_func_t) metronome_write }, { _IOFUNC_NFUNCS_CLOSE,
+                                         ^~~~~~~~~~~~~~~~~~~~
+                                         IOFUNC_MOUNT_FLAGS
+src/metronome.c:238:4: warning: excess elements in scalar initializer
+    (iofunc_func_t) metronome_close }, { _IOFUNC_NFUNCS_OPEN,
+    ^
+src/metronome.c:238:4: note: (near initialization for 'dispatchTable[2]')
+src/metronome.c:238:20: error: expected '}' before 'metronome_close'
+    (iofunc_func_t) metronome_close }, { _IOFUNC_NFUNCS_OPEN,
+                    ^~~~~~~~~~~~~~~
+src/metronome.c:237:39: note: to match this '{'
+    (iofunc_func_t) metronome_write }, { _IOFUNC_NFUNCS_CLOSE,
+                                       ^
+src/metronome.c:238:4: warning: braces around scalar initializer
+    (iofunc_func_t) metronome_close }, { _IOFUNC_NFUNCS_OPEN,
+    ^
+src/metronome.c:238:4: note: (near initialization for 'dispatchTable[3]')
+src/metronome.c:238:41: error: '_IOFUNC_NFUNCS_OPEN' undeclared (first use in this function); did you mean '_IO_CONNECT_OPEN'?
+    (iofunc_func_t) metronome_close }, { _IOFUNC_NFUNCS_OPEN,
+                                         ^~~~~~~~~~~~~~~~~~~
+                                         _IO_CONNECT_OPEN
+src/metronome.c:239:4: warning: excess elements in scalar initializer
+    (iofunc_func_t) metronome_open }, };
+    ^
+src/metronome.c:239:4: note: (near initialization for 'dispatchTable[3]')
+src/metronome.c:239:20: error: expected '}' before 'metronome_open'
+    (iofunc_func_t) metronome_open }, };
+                    ^~~~~~~~~~~~~~
+src/metronome.c:238:39: note: to match this '{'
+    (iofunc_func_t) metronome_close }, { _IOFUNC_NFUNCS_OPEN,
+                                       ^
+src/metronome.c:245:10: error: 'resmgr_context_t' {aka 'struct _resmgr_context'} has no member named 'oid'; did you mean 'id'?
+  context.oid = NULL;
+          ^~~
+          id
+src/metronome.c:245:2: warning: statement with no effect [-Wunused-value]
+  context.oid = NULL;
+  ^~~~~~~
+src/metronome.c:249:10: error: 'resmgr_io_funcs_t' {aka 'struct _resmgr_io_funcs'} has no member named 'funcs'; did you mean 'nfuncs'?
+  ioFuncs.funcs = dispatchTable;
+          ^~~~~
+          nfuncs
+src/metronome.c:249:2: warning: statement with no effect [-Wunused-value]
+  ioFuncs.funcs = dispatchTable;
+  ^~~~~~~
+src/metronome.c:252:2: error: 'Attr' undeclared (first use in this function)
+  Attr.flags = IOFUNC_ATTR_FLAG_NONE;
+  ^~~~
+src/metronome.c:252:6: error: request for member 'flags' in something not a structure or union
+  Attr.flags = IOFUNC_ATTR_FLAG_NONE;
+      ^
+src/metronome.c:252:15: error: 'IOFUNC_ATTR_FLAG_NONE' undeclared (first use in this function); did you mean 'IOFUNC_ATTR_DIRTY_MODE'?
+  Attr.flags = IOFUNC_ATTR_FLAG_NONE;
+               ^~~~~~~~~~~~~~~~~~~~~
+               IOFUNC_ATTR_DIRTY_MODE
+src/metronome.c:252:2: warning: statement with no effect [-Wunused-value]
+  Attr.flags = IOFUNC_ATTR_FLAG_NONE;
+  ^~~~
+src/metronome.c:253:19: warning: assignment to 'iofunc_mount_t *' {aka 'struct _iofunc_mount *'} from incompatible pointer type 'resmgr_io_funcs_t *' {aka 'struct _resmgr_io_funcs *'} [-Wincompatible-pointer-types]
+  ioFuncAttr.mount = &ioFuncs;
+                   ^
+src/metronome.c:254:12: error: 'iofunc_attr_t' {aka 'struct _iofunc_attr'} has no member named 'nparts_max'
+  ioFuncAttr.nparts_max = 1;
+            ^
+src/metronome.c:254:2: warning: statement with no effect [-Wunused-value]
+  ioFuncAttr.nparts_max = 1;
+  ^~~~~~~~~~
+src/metronome.c:255:12: error: 'iofunc_attr_t' {aka 'struct _iofunc_attr'} has no member named 'msg_max_size'
+  ioFuncAttr.msg_max_size = MAX_BUF_LEN;
+            ^
+src/metronome.c:255:2: warning: statement with no effect [-Wunused-value]
+  ioFuncAttr.msg_max_size = MAX_BUF_LEN;
+  ^~~~~~~~~~
+src/metronome.c:257:35: warning: passing argument 1 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+  int attachStatus = resmgr_attach(&context, &resmgrAttr, DEVICE_NAME,
+                                   ^~~~~~~~
+In file included from src/metronome.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:103:31: note: expected 'dispatch_t *' {aka 'struct _dispatch *'} but argument is of type 'resmgr_context_t *' {aka 'struct _resmgr_context *'}
+ int resmgr_attach(dispatch_t *dpp, resmgr_attr_t *attr, const char *path,
+                   ~~~~~~~~~~~~^~~
+src/metronome.c:258:19: warning: passing argument 6 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+    _FTYPE_ANY, 0, &ioFuncAttr, NULL);
+                   ^~~~~~~~~~~
+In file included from src/metronome.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:105:37: note: expected 'const resmgr_connect_funcs_t *' {aka 'const struct _resmgr_connect_funcs *'} but argument is of type 'iofunc_attr_t *' {aka 'struct _iofunc_attr *'}
+       const resmgr_connect_funcs_t *connect_funcs,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+src/metronome.c:257:21: error: too few arguments to function 'resmgr_attach'
+  int attachStatus = resmgr_attach(&context, &resmgrAttr, DEVICE_NAME,
+                     ^~~~~~~~~~~~~
+In file included from src/metronome.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:103:5: note: declared here
+ int resmgr_attach(dispatch_t *dpp, resmgr_attr_t *attr, const char *path,
+     ^~~~~~~~~~~~~
+src/metronome.c:257:21: warning: initialization of 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  int attachStatus = resmgr_attach(&context, &resmgrAttr, DEVICE_NAME,
+                     ^~~~~~~~~~~~~
+src/metronome.c:271:8: warning: implicit declaration of function 'iofunc_connect_attach'; did you mean 'iofunc_ocb_attach'? [-Wimplicit-function-declaration]
+    if (iofunc_connect_attach(&context, context.msg, &ioFuncAttr)
+        ^~~~~~~~~~~~~~~~~~~~~
+        iofunc_ocb_attach
+src/metronome.c:277:4: warning: implicit declaration of function 'iofunc_dispatch'; did you mean 'iofunc_stat'? [-Wimplicit-function-declaration]
+    iofunc_dispatch(&context, &ioFuncs, NULL);
+    ^~~~~~~~~~~~~~~
+    iofunc_stat
+src/metronome.c:280:31: warning: passing argument 2 of 'iofunc_close_ocb' from incompatible pointer type [-Wincompatible-pointer-types]
+    iofunc_close_ocb(&context, &ioFuncs, NULL);
+                               ^~~~~~~~
+In file included from src/metronome.c:8:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/iofunc.h:556:68: note: expected 'iofunc_ocb_t *' {aka 'struct _iofunc_ocb *'} but argument is of type 'resmgr_io_funcs_t *' {aka 'struct _resmgr_io_funcs *'}
+ extern int iofunc_close_ocb(resmgr_context_t *__ctp, iofunc_ocb_t *__ocb, iofunc_attr_t *__attr);
+                                                      ~~~~~~~~~~~~~~^~~~~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:58:55 **** Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:64:12: error: 'iofunc_attr_t' {aka 'struct _iofunc_attr'} has no member named 'attr'
+  ioFuncAttr.attr = (void*) &metronome_data;
+            ^
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:147:66: error: 'iofunc_attr_t' {aka 'struct _iofunc_attr'} has no member named 'attr'
+  metronome_data_t *metronome_data = (metronome_data_t*) ocb->attr->attr;
+                                                                  ^~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:07:32 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:64:12: error: 'iofunc_attr_t' {aka 'struct _iofunc_attr'} has no member named 'extra'
+  ioFuncAttr.extra = (void *)&metronome_data;
+            ^
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:147:66: error: 'iofunc_attr_t' {aka 'struct _iofunc_attr'} has no member named 'extra'
+  metronome_data_t *metronome_data = (metronome_data_t *)ocb->attr->extra;
+                                                                  ^~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:10:06 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:65:5: error: 'struct _iofunc_ocb' has no member named 'extra'
+  ocb->extra = &metronome_data;
+     ^~
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:148:60: error: 'iofunc_ocb_t' {aka 'struct _iofunc_ocb'} has no member named 'extra'
+  metronome_data_t *metronome_data = (metronome_data_t *)ocb->extra;
+                                                            ^~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:11:40 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:65:7: error: 'iofunc_mount_t' {aka 'struct _iofunc_mount'} has no member named 'extra'
+  mount.extra = &metronome_data;
+       ^
+In file included from src/metronome.c:8:
+src/metronome.c:66:48: warning: passing argument 3 of 'iofunc_attr_init_sized' from incompatible pointer type [-Wincompatible-pointer-types]
+  iofunc_attr_init(&ioFuncAttr, S_IFNAM | 0666, &mount, NULL);
+                                                ^
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/iofunc.h:513:89: note: expected 'iofunc_attr_t *' {aka 'struct _iofunc_attr *'} but argument is of type 'iofunc_mount_t *' {aka 'struct _iofunc_mount *'}
+ extern void iofunc_attr_init_sized(iofunc_attr_t *__attr, mode_t __mode, iofunc_attr_t *__dattr, struct _client_info *__info, size_t __size);
+                                                                          ~~~~~~~~~~~~~~~^~~~~~~
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:149:73: error: 'iofunc_mount_t' {aka 'struct _iofunc_mount'} has no member named 'extra'
+  metronome_data_t *metronome_data = (metronome_data_t *)ocb->attr->mount->extra;
+                                                                         ^~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:13:19 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c:12:1: error: unknown type name 'metronome_data_t'; did you mean 'io_rename_extra_t'?
+ metronome_data_t *global_metronome_data;
+ ^~~~~~~~~~~~~~~~
+ io_rename_extra_t
+src/metronome.c: In function 'main':
+src/metronome.c:66:24: warning: assignment to 'int *' from incompatible pointer type 'metronome_data_t *' {aka 'struct metronome_data *'} [-Wincompatible-pointer-types]
+  global_metronome_data = &metronome_data;
+                        ^
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:149:37: warning: initialization of 'metronome_data_t *' {aka 'struct metronome_data *'} from incompatible pointer type 'int *' [-Wincompatible-pointer-types]
+  metronome_data_t *metronome_data = global_metronome_data;
+                                     ^~~~~~~~~~~~~~~~~~~~~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:13:49 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+20:19:00 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:55:14 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:39:6: error: 'metronome_data' undeclared (first use in this function)
+      metronome_data.beats_per_minute = atoi(argv[1]);
+      ^~~~~~~~~~~~~~
+src/metronome.c:39:6: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome.c:54:37: error: 'timer_handler' undeclared (first use in this function); did you mean 'resmgr_handler'?
+      event.sigev_notify_function = &timer_handler;
+                                     ^~~~~~~~~~~~~
+                                     resmgr_handler
+At top level:
+src/metronome.c:28:22: warning: 'ioFuncAttr' defined but not used [-Wunused-variable]
+ static iofunc_attr_t ioFuncAttr;
+                      ^~~~~~~~~~
+src/metronome.c:27:26: warning: 'io_funcs' defined but not used [-Wunused-variable]
+ static resmgr_io_funcs_t io_funcs;
+                          ^~~~~~~~
+src/metronome.c:26:31: warning: 'connect_funcs' defined but not used [-Wunused-variable]
+ static resmgr_connect_funcs_t connect_funcs;
+                               ^~~~~~~~~~~~~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+23:58:49 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c:30:1: error: unknown type name 'DataTableRow'
+ DataTableRow metronome_pattern[] = {
+ ^~~~~~~~~~~~
+src/metronome.c:31:5: warning: braces around scalar initializer
+     {2, 4, 4, "|1&2&"},
+     ^
+src/metronome.c:31:5: note: (near initialization for 'metronome_pattern[0]')
+src/metronome.c:31:9: warning: excess elements in scalar initializer
+     {2, 4, 4, "|1&2&"},
+         ^
+src/metronome.c:31:9: note: (near initialization for 'metronome_pattern[0]')
+src/metronome.c:31:12: warning: excess elements in scalar initializer
+     {2, 4, 4, "|1&2&"},
+            ^
+src/metronome.c:31:12: note: (near initialization for 'metronome_pattern[0]')
+src/metronome.c:31:15: warning: excess elements in scalar initializer
+     {2, 4, 4, "|1&2&"},
+               ^~~~~~~
+src/metronome.c:31:15: note: (near initialization for 'metronome_pattern[0]')
+src/metronome.c:32:5: warning: braces around scalar initializer
+     {3, 4, 6, "|1&2&3&"},
+     ^
+src/metronome.c:32:5: note: (near initialization for 'metronome_pattern[1]')
+src/metronome.c:32:9: warning: excess elements in scalar initializer
+     {3, 4, 6, "|1&2&3&"},
+         ^
+src/metronome.c:32:9: note: (near initialization for 'metronome_pattern[1]')
+src/metronome.c:32:12: warning: excess elements in scalar initializer
+     {3, 4, 6, "|1&2&3&"},
+            ^
+src/metronome.c:32:12: note: (near initialization for 'metronome_pattern[1]')
+src/metronome.c:32:15: warning: excess elements in scalar initializer
+     {3, 4, 6, "|1&2&3&"},
+               ^~~~~~~~~
+src/metronome.c:32:15: note: (near initialization for 'metronome_pattern[1]')
+src/metronome.c:33:5: warning: braces around scalar initializer
+     {4, 4, 8, "|1&2&3&4&"},
+     ^
+src/metronome.c:33:5: note: (near initialization for 'metronome_pattern[2]')
+src/metronome.c:33:9: warning: excess elements in scalar initializer
+     {4, 4, 8, "|1&2&3&4&"},
+         ^
+src/metronome.c:33:9: note: (near initialization for 'metronome_pattern[2]')
+src/metronome.c:33:12: warning: excess elements in scalar initializer
+     {4, 4, 8, "|1&2&3&4&"},
+            ^
+src/metronome.c:33:12: note: (near initialization for 'metronome_pattern[2]')
+src/metronome.c:33:15: warning: excess elements in scalar initializer
+     {4, 4, 8, "|1&2&3&4&"},
+               ^~~~~~~~~~~
+src/metronome.c:33:15: note: (near initialization for 'metronome_pattern[2]')
+src/metronome.c:34:5: warning: braces around scalar initializer
+     {5, 4, 10, "|1&2&3&4-5-"},
+     ^
+src/metronome.c:34:5: note: (near initialization for 'metronome_pattern[3]')
+src/metronome.c:34:9: warning: excess elements in scalar initializer
+     {5, 4, 10, "|1&2&3&4-5-"},
+         ^
+src/metronome.c:34:9: note: (near initialization for 'metronome_pattern[3]')
+src/metronome.c:34:12: warning: excess elements in scalar initializer
+     {5, 4, 10, "|1&2&3&4-5-"},
+            ^~
+src/metronome.c:34:12: note: (near initialization for 'metronome_pattern[3]')
+src/metronome.c:34:16: warning: excess elements in scalar initializer
+     {5, 4, 10, "|1&2&3&4-5-"},
+                ^~~~~~~~~~~~~
+src/metronome.c:34:16: note: (near initialization for 'metronome_pattern[3]')
+src/metronome.c:35:5: warning: braces around scalar initializer
+     {3, 8, 6, "|1-2-3-"},
+     ^
+src/metronome.c:35:5: note: (near initialization for 'metronome_pattern[4]')
+src/metronome.c:35:9: warning: excess elements in scalar initializer
+     {3, 8, 6, "|1-2-3-"},
+         ^
+src/metronome.c:35:9: note: (near initialization for 'metronome_pattern[4]')
+src/metronome.c:35:12: warning: excess elements in scalar initializer
+     {3, 8, 6, "|1-2-3-"},
+            ^
+src/metronome.c:35:12: note: (near initialization for 'metronome_pattern[4]')
+src/metronome.c:35:15: warning: excess elements in scalar initializer
+     {3, 8, 6, "|1-2-3-"},
+               ^~~~~~~~~
+src/metronome.c:35:15: note: (near initialization for 'metronome_pattern[4]')
+src/metronome.c:36:5: warning: braces around scalar initializer
+     {6, 8, 6, "|1&a2&a"},
+     ^
+src/metronome.c:36:5: note: (near initialization for 'metronome_pattern[5]')
+src/metronome.c:36:9: warning: excess elements in scalar initializer
+     {6, 8, 6, "|1&a2&a"},
+         ^
+src/metronome.c:36:9: note: (near initialization for 'metronome_pattern[5]')
+src/metronome.c:36:12: warning: excess elements in scalar initializer
+     {6, 8, 6, "|1&a2&a"},
+            ^
+src/metronome.c:36:12: note: (near initialization for 'metronome_pattern[5]')
+src/metronome.c:36:15: warning: excess elements in scalar initializer
+     {6, 8, 6, "|1&a2&a"},
+               ^~~~~~~~~
+src/metronome.c:36:15: note: (near initialization for 'metronome_pattern[5]')
+src/metronome.c:37:5: warning: braces around scalar initializer
+     {9, 8, 9, "|1&a2&a3&a"},
+     ^
+src/metronome.c:37:5: note: (near initialization for 'metronome_pattern[6]')
+src/metronome.c:37:9: warning: excess elements in scalar initializer
+     {9, 8, 9, "|1&a2&a3&a"},
+         ^
+src/metronome.c:37:9: note: (near initialization for 'metronome_pattern[6]')
+src/metronome.c:37:12: warning: excess elements in scalar initializer
+     {9, 8, 9, "|1&a2&a3&a"},
+            ^
+src/metronome.c:37:12: note: (near initialization for 'metronome_pattern[6]')
+src/metronome.c:37:15: warning: excess elements in scalar initializer
+     {9, 8, 9, "|1&a2&a3&a"},
+               ^~~~~~~~~~~~
+src/metronome.c:37:15: note: (near initialization for 'metronome_pattern[6]')
+src/metronome.c:38:5: warning: braces around scalar initializer
+     {12, 8, 12, "|1&a2&a3&a4&a"},
+     ^
+src/metronome.c:38:5: note: (near initialization for 'metronome_pattern[7]')
+src/metronome.c:38:10: warning: excess elements in scalar initializer
+     {12, 8, 12, "|1&a2&a3&a4&a"},
+          ^
+src/metronome.c:38:10: note: (near initialization for 'metronome_pattern[7]')
+src/metronome.c:38:13: warning: excess elements in scalar initializer
+     {12, 8, 12, "|1&a2&a3&a4&a"},
+             ^~
+src/metronome.c:38:13: note: (near initialization for 'metronome_pattern[7]')
+src/metronome.c:38:17: warning: excess elements in scalar initializer
+     {12, 8, 12, "|1&a2&a3&a4&a"},
+                 ^~~~~~~~~~~~~~~
+src/metronome.c:38:17: note: (near initialization for 'metronome_pattern[7]')
+src/metronome.c:39:5: warning: braces around scalar initializer
+     {0, 0, 0, NULL} // End of table marker
+     ^
+src/metronome.c:39:5: note: (near initialization for 'metronome_pattern[8]')
+src/metronome.c:39:9: warning: excess elements in scalar initializer
+     {0, 0, 0, NULL} // End of table marker
+         ^
+src/metronome.c:39:9: note: (near initialization for 'metronome_pattern[8]')
+src/metronome.c:39:12: warning: excess elements in scalar initializer
+     {0, 0, 0, NULL} // End of table marker
+            ^
+src/metronome.c:39:12: note: (near initialization for 'metronome_pattern[8]')
+src/metronome.c:39:15: warning: excess elements in scalar initializer
+     {0, 0, 0, NULL} // End of table marker
+               ^~~~
+src/metronome.c:39:15: note: (near initialization for 'metronome_pattern[8]')
+src/metronome.c: In function 'timer_handler':
+src/metronome.c:45:41: error: request for member 'pattern' in something not a structure or union
+     for (int i = 0; metronome_pattern[i].pattern != NULL; i++) {
+                                         ^
+src/metronome.c:46:71: error: request for member 'time_signature_top' in something not a structure or union
+         if (metronome_data->time_signature_top == metronome_pattern[i].time_signature_top &&
+                                                                       ^
+src/metronome.c:47:74: error: request for member 'time_signature_bottom' in something not a structure or union
+             metronome_data->time_signature_bottom == metronome_pattern[i].time_signature_bottom) {
+                                                                          ^
+src/metronome.c:48:48: error: request for member 'pattern' in something not a structure or union
+             printf("%s\n", metronome_pattern[i].pattern);
+                                                ^
+src/metronome.c: In function 'main':
+src/metronome.c:64:6: error: 'metronome_data' undeclared (first use in this function)
+      metronome_data.beats_per_minute = atoi(argv[1]);
+      ^~~~~~~~~~~~~~
+src/metronome.c:64:6: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+src/metronome.c:28:22: warning: 'ioFuncAttr' defined but not used [-Wunused-variable]
+ static iofunc_attr_t ioFuncAttr;
+                      ^~~~~~~~~~
+src/metronome.c:27:26: warning: 'io_funcs' defined but not used [-Wunused-variable]
+ static resmgr_io_funcs_t io_funcs;
+                          ^~~~~~~~
+src/metronome.c:26:31: warning: 'connect_funcs' defined but not used [-Wunused-variable]
+ static resmgr_connect_funcs_t connect_funcs;
+                               ^~~~~~~~~~~~~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+00:00:56 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:61:44: error: 'connect_funcs' undeclared (first use in this function); did you mean '_connect_fd'?
+  iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS,
+                                            ^~~~~~~~~~~~~
+                                            _connect_fd
+src/metronome.c:61:44: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome.c:62:5: error: 'io_funcs' undeclared (first use in this function); did you mean 'io_sync_t'?
+    &io_funcs);
+     ^~~~~~~~
+     io_sync_t
+In file included from src/metronome.c:8:
+src/metronome.c:64:20: error: 'ioFuncAttr' undeclared (first use in this function); did you mean '_iofunc_attr'?
+  iofunc_attr_init(&ioFuncAttr, S_IFNAM | 0666, NULL, NULL);
+                    ^~~~~~~~~~
+src/metronome.c:50:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+00:01:22 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:18:02 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:53:25: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  metronome_data.pattern = find_pattern(metronome_data.time_signature_top,
+                         ^
+src/metronome.c:79:44: error: 'connect_funcs' undeclared (first use in this function); did you mean '_connect_fd'?
+  iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS,
+                                            ^~~~~~~~~~~~~
+                                            _connect_fd
+src/metronome.c:79:44: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome.c:80:5: error: 'io_funcs' undeclared (first use in this function); did you mean 'io_sync_t'?
+    &io_funcs);
+     ^~~~~~~~
+     io_sync_t
+In file included from src/metronome.c:8:
+src/metronome.c:82:20: error: 'ioFuncAttr' undeclared (first use in this function); did you mean '_iofunc_attr'?
+  iofunc_attr_init(&ioFuncAttr, S_IFNAM | 0666, NULL, NULL);
+                    ^~~~~~~~~~
+src/metronome.c:68:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  int id;
+      ^~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+01:20:15 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:58:25: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  metronome_data.pattern = find_pattern(metronome_data.time_signature_top,
+                         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:23:32 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:23:44 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:28:16 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:81:22: warning: variable 'ctp' set but not used [-Wunused-but-set-variable]
+  dispatch_context_t *ctp;
+                      ^~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:28:25 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:105:2: error: 'ctp' undeclared (first use in this function)
+  ctp = dispatch_context_alloc(dpp);
+  ^~~
+src/metronome.c:105:2: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+01:28:31 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:81:22: warning: variable 'ctp' set but not used [-Wunused-but-set-variable]
+  dispatch_context_t *ctp;
+                      ^~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:28:40 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:28:46 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:28:52 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:32:45 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:32:52 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:33:00 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:33:25 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:33:30 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:36:59 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:133:29: warning: integer overflow in expression of type 'int' results in '-129542144' [-Woverflow]
+     int beat_interval = (60 * 1000000000) / metronome_data->bpm; // nanoseconds
+                             ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:37:50 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:38:02 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:38:07 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:40:55 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:41:02 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:41:10 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:41:30 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:44:13 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:44:20 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:47:38 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:47:45 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:51:20 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:51:28 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:51:33 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:56:29 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:56:37 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:56:41 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:56:46 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:04:23 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+02:04:30 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:04:37 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:05:00 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:11:31 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+02:11:49 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:11:54 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:12:37 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+02:12:41 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:12:47 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:12:52 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+03:21:51 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+03:21:57 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+03:23:27 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+03:23:47 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+03:28:54 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+03:29:02 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+03:38:41 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:134:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+03:38:46 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+18:53:01 **** Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome-controller   build/x86_64-debug/src/metronome-controller.o  
+18:53:40 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+18:53:40 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+src/metronome-controller.c: In function 'main':
+src/metronome-controller.c:75:2: error: unknown type name 'iofunc_io_funcs_t'; did you mean 'iofunc_funcs_t'?
+  iofunc_io_funcs_t io_funcs;
+  ^~~~~~~~~~~~~~~~~
+  iofunc_funcs_t
+src/metronome-controller.c:78:43: warning: passing argument 2 of 'iofunc_func_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS,
+                                           ^~~~~~~~~~~~~~
+In file included from src/metronome-controller.c:8:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/iofunc.h:468:75: note: expected 'resmgr_connect_funcs_t *' {aka 'struct _resmgr_connect_funcs *'} but argument is of type 'iofunc_funcs_t *' {aka 'struct _iofunc_funcs *'}
+ extern void iofunc_func_init(unsigned __nconnect, resmgr_connect_funcs_t *__connect, unsigned __nio, resmgr_io_funcs_t *__io);
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+src/metronome-controller.c:79:4: warning: passing argument 4 of 'iofunc_func_init' from incompatible pointer type [-Wincompatible-pointer-types]
+    &io_funcs);
+    ^~~~~~~~~
+In file included from src/metronome-controller.c:8:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/iofunc.h:468:121: note: expected 'resmgr_io_funcs_t *' {aka 'struct _resmgr_io_funcs *'} but argument is of type 'int *'
+ extern void iofunc_func_init(unsigned __nconnect, resmgr_connect_funcs_t *__connect, unsigned __nio, resmgr_io_funcs_t *__io);
+                                                                                                      ~~~~~~~~~~~~~~~~~~~^~~~
+src/metronome-controller.c:80:10: error: request for member 'write' in something not a structure or union
+  io_funcs.write = metronome_write;
+          ^
+src/metronome-controller.c:85:19: warning: passing argument 6 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+    _FTYPE_ANY, 0, &connect_funcs, &io_funcs, &io_attr)) == -1) {
+                   ^~~~~~~~~~~~~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:105:37: note: expected 'const resmgr_connect_funcs_t *' {aka 'const struct _resmgr_connect_funcs *'} but argument is of type 'iofunc_funcs_t *' {aka 'struct _iofunc_funcs *'}
+       const resmgr_connect_funcs_t *connect_funcs,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+src/metronome-controller.c:85:35: warning: passing argument 7 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+    _FTYPE_ANY, 0, &connect_funcs, &io_funcs, &io_attr)) == -1) {
+                                   ^~~~~~~~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:106:32: note: expected 'const resmgr_io_funcs_t *' {aka 'const struct _resmgr_io_funcs *'} but argument is of type 'int *'
+       const resmgr_io_funcs_t *io_funcs, RESMGR_HANDLE_T *handle);
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+src/metronome-controller.c:90:2: error: unknown type name 'scss'
+  scss
+  ^~~~
+src/metronome-controller.c:92:2: error: conflicting types for 'ctp'
+  ctp = dispatch_context_alloc(dpp);
+  ^~~
+src/metronome-controller.c:62:22: note: previous declaration of 'ctp' was here
+  dispatch_context_t *ctp;
+                      ^~~
+src/metronome-controller.c:92:8: warning: initialization of 'int' from 'dispatch_context_t *' {aka 'union _dispatch_context *'} makes integer from pointer without a cast [-Wint-conversion]
+  ctp = dispatch_context_alloc(dpp);
+        ^~~~~~~~~~~~~~~~~~~~~~
+src/metronome-controller.c:95:29: warning: passing argument 1 of 'dispatch_block' makes pointer from integer without a cast [-Wint-conversion]
+   if ((ctp = dispatch_block(ctp)) == NULL) {
+                             ^~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:206:22: note: expected 'dispatch_context_t *' {aka 'union _dispatch_context *'} but argument is of type 'int'
+ dispatch_context_t  *dispatch_block(dispatch_context_t *ctp);
+                      ^~~~~~~~~~~~~~
+src/metronome-controller.c:95:12: warning: assignment to 'int' from 'dispatch_context_t *' {aka 'union _dispatch_context *'} makes integer from pointer without a cast [-Wint-conversion]
+   if ((ctp = dispatch_block(ctp)) == NULL) {
+            ^
+src/metronome-controller.c:95:35: warning: comparison between pointer and integer
+   if ((ctp = dispatch_block(ctp)) == NULL) {
+                                   ^~
+src/metronome-controller.c:99:20: warning: passing argument 1 of 'dispatch_handler' makes pointer from integer without a cast [-Wint-conversion]
+   dispatch_handler(ctp);
+                    ^~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:208:47: note: expected 'dispatch_context_t *' {aka 'union _dispatch_context *'} but argument is of type 'int'
+ int      dispatch_handler(dispatch_context_t *ctp);
+                           ~~~~~~~~~~~~~~~~~~~~^~~
+src/metronome-controller.c: In function 'metronome_thread':
+src/metronome-controller.c:108:28: warning: implicit declaration of function 'find_pattern' [-Wimplicit-function-declaration]
+  metronome_data->pattern = find_pattern(metronome_data->time_signature_top,
+                            ^~~~~~~~~~~~
+src/metronome-controller.c:108:26: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  metronome_data->pattern = find_pattern(metronome_data->time_signature_top,
+                          ^
+src/metronome-controller.c:115:2: error: unknown type name 'rust'
+  rust
+  ^~~~
+src/metronome-controller.c:117:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '->' token
+  metronome_data->running = 1;
+                ^~
+src/metronome-controller.c: In function 'metronome_write':
+src/metronome-controller.c:146:2: error: 'c' undeclared (first use in this function)
+  c
+  ^
+src/metronome-controller.c:146:2: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome-controller.c:146:3: error: expected ';' before 'if'
+  c
+   ^
+   ;
+src/metronome-controller.c:148:2:
+  if ((msg->i.xtype & _IO_XTYPE_MASK) != _IO_XTYPE_NONE)
+  ~~
+src/metronome-controller.c:176:2: error: expected declaration or statement at end of input
+  return EOK;
+  ^~~~~~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome-controller.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome-controller.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:54:10 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+18:54:10 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+src/metronome-controller.c: In function 'main':
+src/metronome-controller.c:75:2: error: unknown type name 'iofunc_io_funcs_t'; did you mean 'iofunc_funcs_t'?
+  iofunc_io_funcs_t io_funcs;
+  ^~~~~~~~~~~~~~~~~
+  iofunc_funcs_t
+src/metronome-controller.c:78:43: warning: passing argument 2 of 'iofunc_func_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS,
+                                           ^~~~~~~~~~~~~~
+In file included from src/metronome-controller.c:8:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/iofunc.h:468:75: note: expected 'resmgr_connect_funcs_t *' {aka 'struct _resmgr_connect_funcs *'} but argument is of type 'iofunc_funcs_t *' {aka 'struct _iofunc_funcs *'}
+ extern void iofunc_func_init(unsigned __nconnect, resmgr_connect_funcs_t *__connect, unsigned __nio, resmgr_io_funcs_t *__io);
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+src/metronome-controller.c:79:4: warning: passing argument 4 of 'iofunc_func_init' from incompatible pointer type [-Wincompatible-pointer-types]
+    &io_funcs);
+    ^~~~~~~~~
+In file included from src/metronome-controller.c:8:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/iofunc.h:468:121: note: expected 'resmgr_io_funcs_t *' {aka 'struct _resmgr_io_funcs *'} but argument is of type 'int *'
+ extern void iofunc_func_init(unsigned __nconnect, resmgr_connect_funcs_t *__connect, unsigned __nio, resmgr_io_funcs_t *__io);
+                                                                                                      ~~~~~~~~~~~~~~~~~~~^~~~
+src/metronome-controller.c:80:10: error: request for member 'write' in something not a structure or union
+  io_funcs.write = metronome_write;
+          ^
+src/metronome-controller.c:85:19: warning: passing argument 6 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+    _FTYPE_ANY, 0, &connect_funcs, &io_funcs, &io_attr)) == -1) {
+                   ^~~~~~~~~~~~~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:105:37: note: expected 'const resmgr_connect_funcs_t *' {aka 'const struct _resmgr_connect_funcs *'} but argument is of type 'iofunc_funcs_t *' {aka 'struct _iofunc_funcs *'}
+       const resmgr_connect_funcs_t *connect_funcs,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+src/metronome-controller.c:85:35: warning: passing argument 7 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+    _FTYPE_ANY, 0, &connect_funcs, &io_funcs, &io_attr)) == -1) {
+                                   ^~~~~~~~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:106:32: note: expected 'const resmgr_io_funcs_t *' {aka 'const struct _resmgr_io_funcs *'} but argument is of type 'int *'
+       const resmgr_io_funcs_t *io_funcs, RESMGR_HANDLE_T *handle);
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+src/metronome-controller.c: In function 'metronome_thread':
+src/metronome-controller.c:106:28: warning: implicit declaration of function 'find_pattern' [-Wimplicit-function-declaration]
+  metronome_data->pattern = find_pattern(metronome_data->time_signature_top,
+                            ^~~~~~~~~~~~
+src/metronome-controller.c:106:26: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  metronome_data->pattern = find_pattern(metronome_data->time_signature_top,
+                          ^
+src/metronome-controller.c: In function 'metronome_write':
+src/metronome-controller.c:142:2: error: 'c' undeclared (first use in this function)
+  c
+  ^
+src/metronome-controller.c:142:2: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome-controller.c:142:3: error: expected ';' before 'if'
+  c
+   ^
+   ;
+src/metronome-controller.c:144:2:
+  if ((msg->i.xtype & _IO_XTYPE_MASK) != _IO_XTYPE_NONE)
+  ~~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome-controller.o' failed
+make: *** [build/x86_64-debug/src/metronome-controller.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:07:20 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:135:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+19:07:20 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+src/metronome-controller.c: In function 'main':
+src/metronome-controller.c:78:79: error: 'iofunc_io_t' undeclared (first use in this function); did you mean 'iofunc_stat'?
+  iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS, (iofunc_io_t *)&io_funcs);
+                                                                               ^~~~~~~~~~~
+                                                                               iofunc_stat
+src/metronome-controller.c:78:79: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome-controller.c:78:92: error: expected expression before ')' token
+  iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS, (iofunc_io_t *)&io_funcs);
+                                                                                            ^
+src/metronome-controller.c:78:43: warning: passing argument 2 of 'iofunc_func_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS, (iofunc_io_t *)&io_funcs);
+                                           ^~~~~~~~~~~~~~
+In file included from src/metronome-controller.c:8:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/iofunc.h:468:75: note: expected 'resmgr_connect_funcs_t *' {aka 'struct _resmgr_connect_funcs *'} but argument is of type 'iofunc_funcs_t *' {aka 'struct _iofunc_funcs *'}
+ extern void iofunc_func_init(unsigned __nconnect, resmgr_connect_funcs_t *__connect, unsigned __nio, resmgr_io_funcs_t *__io);
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+src/metronome-controller.c:82:10: error: 'iofunc_funcs_t' {aka 'struct _iofunc_funcs'} has no member named 'read'
+  io_funcs.read = iofunc_read_default;
+          ^
+src/metronome-controller.c:83:10: error: 'iofunc_funcs_t' {aka 'struct _iofunc_funcs'} has no member named 'write'
+  io_funcs.write = iofunc_write_verify;
+          ^
+src/metronome-controller.c:84:10: error: 'iofunc_funcs_t' {aka 'struct _iofunc_funcs'} has no member named 'write_verify'
+  io_funcs.write_verify = metronome_write;
+          ^
+src/metronome-controller.c:88:83: warning: passing argument 6 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME, _FTYPE_ANY, 0, &connect_funcs, (iofunc_funcs_t *)&io_funcs, &io_attr)) == -1)
+                                                                                   ^~~~~~~~~~~~~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:105:37: note: expected 'const resmgr_connect_funcs_t *' {aka 'const struct _resmgr_connect_funcs *'} but argument is of type 'iofunc_funcs_t *' {aka 'struct _iofunc_funcs *'}
+       const resmgr_connect_funcs_t *connect_funcs,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+src/metronome-controller.c:88:99: warning: passing argument 7 of 'resmgr_attach' from incompatible pointer type [-Wincompatible-pointer-types]
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME, _FTYPE_ANY, 0, &connect_funcs, (iofunc_funcs_t *)&io_funcs, &io_attr)) == -1)
+                                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/metronome-controller.c:9:
+C:/Users/harry/qnx710/target/qnx7/usr/include/sys/dispatch.h:106:32: note: expected 'const resmgr_io_funcs_t *' {aka 'const struct _resmgr_io_funcs *'} but argument is of type 'iofunc_funcs_t *' {aka 'struct _iofunc_funcs *'}
+       const resmgr_io_funcs_t *io_funcs, RESMGR_HANDLE_T *handle);
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+src/metronome-controller.c: In function 'metronome_thread':
+src/metronome-controller.c:110:28: warning: implicit declaration of function 'find_pattern' [-Wimplicit-function-declaration]
+  metronome_data->pattern = find_pattern(metronome_data->time_signature_top,
+                            ^~~~~~~~~~~~
+src/metronome-controller.c:110:26: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  metronome_data->pattern = find_pattern(metronome_data->time_signature_top,
+                          ^
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome-controller.o' failed
+make: *** [build/x86_64-debug/src/metronome-controller.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:07:54 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:07:54 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome-controller   build/x86_64-debug/src/metronome-controller.o  
+C:\Users\harry\qnx710\host\win64\x86_64\usr\bin\x86_64-pc-nto-qnx7.1.0-ld: C:/Users/harry/qnx710/target/qnx7/x86_64/lib/crt1.o: in function `_start':
+/builds/workspace/QOS222-SDP/build_x86_64/lib/c/startup/x86_64/crt1.S:88: undefined reference to `main'
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/bin/x86_64-pc-nto-qnx7.1.0-ld caught signal 1
+Makefile:60: recipe for target 'build/x86_64-debug/metronome-controller' failed
+make: *** [build/x86_64-debug/metronome-controller] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:08:11 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:08:11 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome-controller   build/x86_64-debug/src/metronome-controller.o  
+19:08:23 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c:14:10: fatal error: metronome.h: No such file or directory
+ #include "metronome.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:08:24 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:08:38 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c:20:16: error: redefinition of 'struct DataTableRow'
+ typedef struct DataTableRow {
+                ^~~~~~~~~~~~
+In file included from src/metronome.c:14:
+src/metronome.h:26:16: note: originally defined here
+ typedef struct DataTableRow {
+                ^~~~~~~~~~~~
+src/metronome.c:25:3: error: conflicting types for 'DataTableRow'
+ } DataTableRow;
+   ^~~~~~~~~~~~
+In file included from src/metronome.c:14:
+src/metronome.h:31:3: note: previous declaration of 'DataTableRow' was here
+ } DataTableRow;
+   ^~~~~~~~~~~~
+src/metronome.c:27:14: error: conflicting types for 't'
+ DataTableRow t[] = { { 2, 4, 4, "|1&2&" }, { 3, 4, 6, "|1&2&3&" }, { 4, 4, 8,
+              ^
+In file included from src/metronome.c:14:
+src/metronome.h:33:14: note: previous definition of 't' was here
+ DataTableRow t[] = { { 2, 4, 4, "|1&2&" }, { 3, 4, 6, "|1&2&3&" }, { 4, 4, 8,
+              ^
+src/metronome.c:32:16: error: redefinition of 'struct metronome_data'
+ typedef struct metronome_data {
+                ^~~~~~~~~~~~~~
+In file included from src/metronome.c:14:
+src/metronome.h:17:16: note: originally defined here
+ typedef struct metronome_data {
+                ^~~~~~~~~~~~~~
+src/metronome.c:39:3: error: conflicting types for 'metronome_data_t'
+ } metronome_data_t;
+   ^~~~~~~~~~~~~~~~
+In file included from src/metronome.c:14:
+src/metronome.h:24:3: note: previous declaration of 'metronome_data_t' was here
+ } metronome_data_t;
+   ^~~~~~~~~~~~~~~~
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:136:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:08:38 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:10:20 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:115:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+19:10:21 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:14:38 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:104:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+19:14:39 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:18:53 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:18:53 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+src/metronome-controller.c:4:10: fatal error: ../../src/metronome.h: No such file or directory
+ #include "../../src/metronome.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome-controller.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome-controller.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:19:43 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+19:19:44 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome-controller   build/x86_64-debug/src/metronome-controller.o  
+21:13:00 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: *** No rule to make target 'src/metronome.h', needed by 'build/x86_64-debug/src/metronome.o'.  Stop.
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:13:00 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: *** No rule to make target 'src/../../metronome/src/metronome.h', needed by 'build/x86_64-debug/src/metronome-controller.o'.  Stop.
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:13:58 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:104:9: warning: variable 'pause_flag' set but not used [-Wunused-but-set-variable]
+     int pause_flag = 0;
+         ^~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+21:13:58 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome-controller   build/x86_64-debug/src/metronome-controller.o  
+21:33:40 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_thread':
+src/metronome.c:117:19: error: 'metronome_data_t' {aka 'struct metronome_data'} has no member named 'running'
+     metronome_data->running = 1;
+                   ^~
+src/metronome.c:119:19: error: 'metronome_data_t' {aka 'struct metronome_data'} has no member named 'stop_requested'
+     metronome_data->stop_requested = 0;
+                   ^~
+src/metronome.c:131:27: error: 'metronome_data_t' {aka 'struct metronome_data'} has no member named 'stop_requested'
+     while (!metronome_data->stop_requested) {
+                           ^~
+src/metronome.c:146:19: error: 'metronome_data_t' {aka 'struct metronome_data'} has no member named 'running'
+     metronome_data->running = 0;
+                   ^~
+src/metronome.c: In function 'find_num_intervals':
+src/metronome.c:163:24: error: 'DataTableRow' {aka 'struct DataTableRow'} has no member named 'num_intervals'
+             return t[i].num_intervals;
+                        ^
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:33:41 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome-controller.d,-MT,build/x86_64-debug/src/metronome-controller.o -o build/x86_64-debug/src/metronome-controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome-controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome-controller   build/x86_64-debug/src/metronome-controller.o  
+21:38:00 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+21:38:01 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:38:03 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:38:03 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:41:12 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:41:12 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:41:21 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:41:22 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:41:40 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:41:40 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:52:28 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+21:52:28 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:52:38 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:52:38 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:52:44 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:52:44 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:52:49 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:52:49 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:58:50 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+21:58:50 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:58:55 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+21:58:55 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:04:12 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+22:04:13 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:04:24 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:04:24 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:09:52 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+22:09:52 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:09:57 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:09:58 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:14:01 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+22:14:01 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:14:07 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:14:07 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:18:05 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+22:18:06 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:18:14 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:18:14 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:43:56 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+22:43:56 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:03:25 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:03:25 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:03:31 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:03:32 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:07:17 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:07:18 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:07:23 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:07:23 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:11:19 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:11:20 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:13:38 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:13:38 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:13:45 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:13:45 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:17:00 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:17:00 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:17:09 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:17:10 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:19:34 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:19:34 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:19:45 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:19:45 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:34:40 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:34:41 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:38:25 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:38:26 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+23:42:28 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+23:42:29 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+00:16:27 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+00:16:27 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+00:20:10 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+00:20:10 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+00:22:44 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+00:22:44 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:43:43 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:43:44 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:45:31 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:45:32 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+01:45:56 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+01:45:56 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:01:42 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+02:01:42 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+02:07:52 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+02:07:53 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+05:27:48 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:51:7: error: 'id' undeclared (first use in this function)
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+       ^~
+src/metronome.c:51:7: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome.c:51:26: error: 'dpp' undeclared (first use in this function); did you mean 'dup'?
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+                          ^~~
+                          dup
+src/metronome.c:51:32: error: 'resmgr_attr' undeclared (first use in this function); did you mean '_resmgr_attr'?
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+                                ^~~~~~~~~~~
+                                _resmgr_attr
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+05:27:49 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+05:28:57 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:53:7: error: 'id' undeclared (first use in this function)
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+       ^~
+src/metronome.c:53:7: note: each undeclared identifier is reported only once for each function it appears in
+src/metronome.c:53:32: error: 'resmgr_attr' undeclared (first use in this function); did you mean '_resmgr_attr'?
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+                                ^~~~~~~~~~~
+                                _resmgr_attr
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+05:28:57 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+05:33:17 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:64:7: error: 'id' undeclared (first use in this function)
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+       ^~
+src/metronome.c:64:7: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+05:33:17 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+05:34:35 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+05:34:36 **** Incremental Build of configuration x86_64-debug for project metronome-controller ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+05:40:12 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+05:40:17 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+07:32:46 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+07:36:04 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+12:14:46 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+12:39:04 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:191:20: warning: unused variable 'metronome_data' [-Wunused-variable]
+  metronome_data_t *metronome_data = global_metronome_data;
+                    ^~~~~~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+12:39:13 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+12:44:12 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:188:20: warning: unused variable 'metronome_data' [-Wunused-variable]
+  metronome_data_t *metronome_data = global_metronome_data;
+                    ^~~~~~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+12:44:35 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'metronome_write':
+src/metronome.c:191:20: warning: unused variable 'metronome_data' [-Wunused-variable]
+  metronome_data_t *metronome_data = global_metronome_data;
+                    ^~~~~~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+12:49:30 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+12:55:41 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+13:10:25 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+13:25:54 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:39:27: error: 'metronome_data_t' {aka 'struct <anonymous>'} has no member named 'pause_sem'; did you mean 'pause_flag'?
+  sem_init(&metronome_data.pause_sem, 0, 0);
+                           ^~~~~~~~~
+                           pause_flag
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:27:03 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+13:33:56 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+13:34:04 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:18:21 **** Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/test_metronome.d,-MT,build/x86_64-debug/src/test_metronome.o -o build/x86_64-debug/src/test_metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/test_metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/test_metronome   build/x86_64-debug/src/test_metronome.o  
+14:18:37 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:18:37 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/test_metronome.d,-MT,build/x86_64-debug/src/test_metronome.o -o build/x86_64-debug/src/test_metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/test_metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/test_metronome   build/x86_64-debug/src/test_metronome.o  
+14:21:48 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:21:48 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/test_metronome.d,-MT,build/x86_64-debug/src/test_metronome.o -o build/x86_64-debug/src/test_metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/test_metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/test_metronome   build/x86_64-debug/src/test_metronome.o  
+14:24:15 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:72:7: error: 'id' undeclared (first use in this function)
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+       ^~
+src/metronome.c:72:7: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/metronome.o' failed
+make: *** [build/x86_64-debug/src/metronome.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:24:15 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:24:30 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+14:24:30 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:29:08 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:29:09 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/test_metronome.d,-MT,build/x86_64-debug/src/test_metronome.o -o build/x86_64-debug/src/test_metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/test_metronome.c
+src/test_metronome.c: In function 'main':
+src/test_metronome.c:10:15: error: 'METRONOME_DEVICE_NAME' undeclared (first use in this function)
+     fd = open(METRONOME_DEVICE_NAME, O_WRONLY | O_NONBLOCK);
+               ^~~~~~~~~~~~~~~~~~~~~
+src/test_metronome.c:10:15: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/harry/qnx710/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.1.0/8.3.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/test_metronome.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/test_metronome.o' failed
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:31:26 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:31:26 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/test_metronome.d,-MT,build/x86_64-debug/src/test_metronome.o -o build/x86_64-debug/src/test_metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/test_metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/test_metronome   build/x86_64-debug/src/test_metronome.o  
+14:31:41 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:31:41 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:40:32 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+src/metronome.c: In function 'main':
+src/metronome.c:70:12: warning: 'dpp' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          _FTYPE_ANY, 0, &connect_funcs, &io_funcs, &ioFuncAttr)) == -1) {
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+14:40:33 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:43:50 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+14:43:51 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:48:05 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/metronome.d,-MT,build/x86_64-debug/src/metronome.o -o build/x86_64-debug/src/metronome.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/metronome.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/metronome   build/x86_64-debug/src/metronome.o  
+14:48:06 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:48:08 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+14:48:08 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+22:33:00 **** Incremental Build of configuration x86_64-debug for project test_metronome ****
+make -j16 all 
+make: Nothing to be done for 'all'.

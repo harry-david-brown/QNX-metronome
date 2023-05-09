@@ -1,0 +1,201 @@
+#include "metronome.h"
+
+#define METRONOME_DEVICE_NAME "/dev/local/metronome"
+
+sem_t terminate_sem;
+
+metronome_data_t *global_metronome_data;
+
+resmgr_connect_funcs_t connect_funcs;
+resmgr_io_funcs_t io_funcs;
+iofunc_attr_t ioFuncAttr;
+
+void handle_signal(int signal) {
+    if (signal == SIGINT || signal == SIGTERM) {
+        sem_post(&terminate_sem);
+    } else if (signal == SIGUSR1) {
+        global_metronome_data->pause_flag = 1;
+    }
+}
+
+
+int main(int argc, char *argv[]) {
+	if (argc != 4) {
+		fprintf(stderr,
+				"Usage: %s beats-per-minute time-signature-top time-signature-bottom\n",
+				argv[0]);
+		return 1;
+	}
+
+
+
+	metronome_data_t metronome_data;
+	metronome_data.bpm = atoi(argv[1]);
+	metronome_data.time_signature_top = atoi(argv[2]);
+	metronome_data.time_signature_bottom = atoi(argv[3]);
+	metronome_data.pattern = find_pattern(metronome_data.time_signature_top,
+			metronome_data.time_signature_bottom);
+	metronome_data.pause_seconds = 0;
+
+
+	if (!metronome_data.pattern) {
+		fprintf(stderr, "Invalid time signature.\n");
+		return 1;
+	}
+
+	pthread_create(&metronome_data.metronome_thread, NULL, metronome_thread,
+			&metronome_data);
+
+	// Initialize dispatch handle
+	dispatch_t *dpp;
+
+	if ((dpp = dispatch_create()) == NULL) {
+		fprintf(stderr, "%s: Unable to allocate dispatch handle.\n", argv[0]);
+		return 1;
+	}
+
+	// Initialize resmgr_attr
+	resmgr_attr_t resmgr_attr;
+	global_metronome_data = &metronome_data;
+
+
+	memset(&resmgr_attr, 0, sizeof(resmgr_attr));
+	resmgr_attr.nparts_max = 1;
+	resmgr_attr.msg_max_size = 2048;
+
+	iofunc_func_init(_RESMGR_CONNECT_NFUNCS, &connect_funcs, _RESMGR_IO_NFUNCS,
+			&io_funcs);
+	io_funcs.write = metronome_write;
+	iofunc_attr_init(&ioFuncAttr, S_IFNAM | 0666, NULL, NULL);
+	global_metronome_data = &metronome_data;
+
+	int id;
+	if ((id = resmgr_attach(dpp, &resmgr_attr, METRONOME_DEVICE_NAME,
+			_FTYPE_ANY, 0, &connect_funcs, &io_funcs, &ioFuncAttr)) == -1) {
+		fprintf(stderr, "%s: Unable to attach name.\n", argv[0]);
+		return 1;
+	}
+	printf("Metronome device created at /dev/local/metronome\n");
+
+
+	//ctp = dispatch_context_alloc(dpp);
+
+	sem_init(&terminate_sem, 0, 0);
+	signal(SIGINT, handle_signal);
+	signal(SIGTERM, handle_signal);
+	signal(SIGUSR1, handle_signal);
+	while (1) {
+		if (sem_wait(&terminate_sem) == 0) {
+			break;
+		}
+	}
+
+
+
+	return 0;
+}
+
+const char* find_pattern(int time_signature_top, int time_signature_bottom) {
+	for (int i = 0; i < sizeof(t) / sizeof(DataTableRow); i++) {
+		if (t[i].time_signature_top == time_signature_top
+				&& t[i].time_signature_bottom == time_signature_bottom) {
+			return t[i].pattern;
+		}
+	}
+	return NULL;
+}
+
+void* metronome_thread(void *data) {
+	metronome_data_t *metronome_data = (metronome_data_t*) data;
+	metronome_data->pattern = find_pattern(metronome_data->time_signature_top,
+			metronome_data->time_signature_bottom);
+	if (!metronome_data->pattern) {
+		fprintf(stderr, "Invalid time signature\n");
+		return NULL;
+	}
+
+	metronome_data->pause_seconds = 0;
+
+	double beats_per_second = metronome_data->bpm / 60.0;
+	double seconds_per_measure = metronome_data->time_signature_top
+			/ beats_per_second;
+	int num_intervals = find_num_intervals(metronome_data->time_signature_top,
+			metronome_data->time_signature_bottom);
+	double seconds_per_interval = seconds_per_measure / num_intervals;
+
+	struct timespec sleep_time;
+	sleep_time.tv_sec = 0;
+	sleep_time.tv_nsec = (long) (seconds_per_interval * 1000000000.0);
+
+	int pattern_length = strlen(metronome_data->pattern);
+
+	while (1) {
+		if (metronome_data->pause_flag) {
+		            sleep(metronome_data->pause_seconds);
+		            metronome_data->pause_flag = 0;
+		            metronome_data->pause_seconds = 0;
+		        }
+
+	    for (int i = 0; i < pattern_length; i++) {
+	        if (i != pattern_length - 1 || metronome_data->pattern[i] != '|') {
+	            printf("%c", metronome_data->pattern[i]);
+	            fflush(stdout);
+	        }
+	        nanosleep(&sleep_time, NULL);
+	    }
+
+	    printf("\n");
+	    fflush(stdout);
+
+
+	}
+
+
+
+
+	return NULL;
+}
+
+int find_num_intervals(int time_signature_top, int time_signature_bottom) {
+	for (int i = 0; i < sizeof(t) / sizeof(DataTableRow); i++) {
+		if (t[i].time_signature_top == time_signature_top
+				&& t[i].time_signature_bottom == time_signature_bottom) {
+			return t[i].beats_in_measure;
+		}
+	}
+	return 0;
+}
+
+int metronome_write(resmgr_context_t *ctp, io_write_t *msg, iofunc_ocb_t *ocb) {
+	printf("metronome_write called\n");
+    int nbytes;
+    char buf[50];
+
+    if ((nbytes = resmgr_msgread(ctp, buf, sizeof(buf), sizeof(msg->i))) == -1) {
+        return errno;
+    }
+
+    buf[nbytes] = '\0';
+
+    if (strncmp(buf, "pause", 5) == 0) {
+        printf("Received pause command.\n");
+    }
+
+    metronome_data_t *metronome_data = global_metronome_data;
+
+    if (strncmp(buf, "pause ", 6) == 0) {
+            int pause_seconds = atoi(buf + 6);
+            if (pause_seconds >= 1 && pause_seconds <= 9) {
+                metronome_data->pause_seconds = pause_seconds;
+                metronome_data->pause_flag = 1;
+                printf("Received pause command.\n");
+            }
+        }
+
+    resmgr_msgwrite(ctp, NULL, 0, 0);
+
+    return 0;
+}
+
+
+
